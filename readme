@@ -1,0 +1,6 @@
+Python 3.10.2
+Selenium  4.1.5
+
+pip install selenium
+
+Запуск парсера: python dns.py
