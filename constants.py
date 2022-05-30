@@ -13,55 +13,56 @@ back_to_main_catalog = (By.CSS_SELECTOR, 'li.breadcrumb-list__item:nth-child(3) 
 expand_character = (By.CSS_SELECTOR, 'button.product-characteristics__expand')
 item_price = (By.CSS_SELECTOR, 'div.product-buy__price')
 item_description = (By.CSS_SELECTOR, 'div.product-card-top__specs')
+item_image = (By.CSS_SELECTOR, 'picture.product-images-slider__main source')
 
 processor = {
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(2)'),
-    'name': 'processor_model',
+    'name': 'processor',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec div.product-characteristics__spec-value')
 }
 
 motherboard = {
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(3)'),
-    'name': 'motherboard_model',
+    'name': 'motherboard',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 videocard = {
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(4)'),
-    'name': 'videocard_model',
+    'name': 'videocard',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 RAM = {
     'subcategory': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(2)'),
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(5)'),
-    'name': 'RAM_model',
+    'name': 'RAM',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 powerunit = {
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(6)'),
-    'name': 'powerunit_model',
+    'name': 'powerunit',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 case = {
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(7)'),
-    'name': 'case_model',
+    'name': 'case',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 cooler = {
     'subcategory': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(2)'),
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(8)'),
-    'name': 'cooler_model',
+    'name': 'cooler',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 
 HDD = {
     'subcategory': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(2)'),
     'link': (By.CSS_SELECTOR, 'a.subcategory__item:nth-child(11)'),
-    'name': 'hdd_model',
+    'name': 'hdd',
     'model': (By.CSS_SELECTOR, 'div.product-characteristics div.product-characteristics__group:nth-child(2) div.product-characteristics__spec:nth-child(3) div.product-characteristics__spec-value')
 }
 

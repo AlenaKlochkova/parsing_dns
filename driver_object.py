@@ -1,8 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from constants import last_page_attribute
 import json
+from urllib.request import urlretrieve
 
 
 class Driver_Object():
@@ -89,4 +89,21 @@ class Driver_Object():
 
         return self.driver.find_elements(*selector)
 
+    def image_link(self, selector):
+
+        """Возвращает ссылку, указанную в атрибуте элемента"""
+
+        return self.driver.find_element(*selector).get_attribute('srcset')
+
+    def focus(self, item):
+
+        """Пролистывает страницу до указанного элемента"""
+
+        self.driver.execute_script("arguments[0].scrollIntoView();", item)
+
+    def save_image(self, link, component, item_model):
+
+        """Сохраняет картинку по ссылке в указанную директорию"""
+
+        urlretrieve(link, f'{component["name"]}/{item_model}.jpg')
 
