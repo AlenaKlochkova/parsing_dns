@@ -14,7 +14,6 @@ browser = Driver_Object(driver)
 
 browser.go_to(dns)
 browser.option(pc_sidebar)
-browser.option(detail_pc)
 
 components = [processor, motherboard, videocard, RAM, powerunit, case, cooler, HDD]
 
@@ -42,8 +41,8 @@ for component in components:
                 'pk': index,
                 'fields': {
                     'image': f'{component["name"]}/{item_model}.jpg',
-                    'item_model': item_model,
-                    'detail': browser.get_info(item_description)[:-10],
+                    'model': item_model,
+                    'description': browser.get_info(item_description)[:-10],
                     'price': int(browser.get_info(item_price)[:-2].replace(' ', ''))
                 }
             }
