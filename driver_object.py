@@ -65,11 +65,13 @@ class Driver_Object():
     def page_navigation(self, selector):
 
         """Ищет количество доступных страниц"""
-
-        self.loading(selector)
-        last_page = self.driver.find_element(*selector)
-        last_page_number = last_page.get_attribute(last_page_attribute)
-        return int(last_page_number)
+        try:
+            self.loading(selector)
+            last_page = self.driver.find_element(*selector)
+            last_page_number = last_page.get_attribute(last_page_attribute)
+            return int(last_page_number)
+        except:
+            return 2
 
     def get_info(self, selector):
 
@@ -107,3 +109,13 @@ class Driver_Object():
 
         urlretrieve(link, f'{component["name"]}/{item_model}.jpg')
 
+    def get_price(self, item_price):
+        price = self.get_info(item_price)
+        end_price = price.find('₽')
+        price = price[:end_price].replace(' ', '')
+        return int(price)
+
+    def to_next_page(self, selector):
+        self.loading(selector)
+        next_page = self.driver.find_element(*selector)
+        self.driver.execute_script("arguments[0].click();", next_page)
