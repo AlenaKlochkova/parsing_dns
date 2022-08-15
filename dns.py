@@ -31,7 +31,7 @@ for component in components:
         driver.refresh()
         browser.loading(catalog_list)
         item_list = browser.get_list(catalog_list)
-        for item in item_list[:1]:
+        for item in item_list:
             browser.focus(item)
             browser.new_tab(item)
             browser.to_new_tab()
